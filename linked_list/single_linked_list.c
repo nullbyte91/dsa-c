@@ -22,7 +22,7 @@ void
 insert(struct Node** rootPtr, int data){
     struct Node* node = getNewNode(data);
 
-    if (rootPtr == NULL){
+    if (*(rootPtr) == NULL){
         *(rootPtr) = node;
     } else {
         node->next = *(rootPtr);
@@ -45,7 +45,7 @@ traversal(struct Node* rootPtr){
 
 void
 delete(struct Node** rootPtr){
-    if (rootPtr == NULL){
+    if (*(rootPtr) == NULL){
         printf("Linked list is empty\n");
         return;
     } else {
